@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: grid;
+  width: 1170px;
+  padding: 75px 0;
+  max-width: 1170px;
+  gap: 100px;
+}
+
+.wrapper-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  place-items: center;
+}
+
+.h1 {
+  grid-column: 1/-1;
+  font-weight: 500;
+  font-size: 36px;
+  margin-bottom: 70px;
+}
+
+.wrapper-item {
+  display: grid;
+  width: 570px;
+  height: 220px;
+  background: #F5F5F6;
+  padding: 50px 30px;
+}
+
+.h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #525252;
+}
+
+.action-btn {
+  color: #525252;
+  grid-column: 1/-1;
+  width: 270px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background: #FFDD2D;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.wrapper-questions {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
+
+.wrapper-question {
+  display: grid;
+  grid-template-columns: 70px 1fr 24px;
+  width: 100%;
+  min-height: 70px;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid #E4E4E4;
+  padding-right: 69px;
+}
+
+.question-content{
+  padding: 25px 0;
+  display: grid;
+  gap: 24px;
+}
+
+.question-answer,
+.question-number {
+  background: #FFDD2D;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #FFFFFF;
+  border: 1px solid #FFDD2D;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.btn-open {
+  cursor: pointer;
+  align-self: start;
+  padding: 10px;
+  position: relative;
+  top: 24px;
+}
+
+.btn-open::before {
+  content: "";
+  width: 21px;
+  height: 2px;
+  background: #636363;
+  position: absolute;
+  transform  : translate(-50%, -50%);
+}
+
+.btn-open::after {
+  content: "";
+  width: 2px;
+  height: 21px;
+  background: #636363;
+  position: absolute;
+  transform  : translate(-50%, -50%);
+}
+
+.h3{
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.question-answer{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.question-text{
+  display: none;
+}
+
+.open .question-text {
+  display: block
+}
+
+.open .btn-open::before{
+  justify-self: start;
+}
+
+.open .btn-open::after {
+  display: none;
+}
+
+.question-answer{
+  display: none;
+}
+
+.open .question-number{
+  display: none;
+}
+
+.open .question-answer{
+  display: grid;
+}
+
+
+
+
+
